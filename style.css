@@ -373,7 +373,7 @@ body {
 .produto-card.hidden { display:none; }
 
 .produto-img {
-  height:240px;
+  height:350px;
   background: var(--bg, var(--sand));
   display:flex; align-items:center; justify-content:center;
   position:relative; overflow:hidden;

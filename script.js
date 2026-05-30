@@ -148,7 +148,7 @@ document.addEventListener('keydown', (e) => {
 /* ---- LINKS DE CONTATO ---- */
 // Substitua pelos dados reais da vendedora!
 const WHATSAPP_NUMERO = '5531981111471';
-const INSTAGRAM_PERFIL = 'macrocrochet';
+const INSTAGRAM_PERFIL = 'manu_martins35';
  
 function abrirWhatsApp() {
   const mensagem = encodeURIComponent(
