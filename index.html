@@ -75,43 +75,7 @@
     </div>
   </section>
 
-  <!-- SOBRE -->
-  <section class="sobre" id="sobre">
-    <div class="container">
-      <div class="sobre-grid">
-        <div class="sobre-visual reveal">
-          <div class="sobre-decorativo">
-            <div class="crochet-circle">
-              <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <pattern id="crochet" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-                    <circle cx="15" cy="15" r="10" fill="none" stroke="#cd6184" stroke-width="1.5" opacity="0.5"/>
-                    <circle cx="0"  cy="0"  r="5"  fill="none" stroke="#4a7a3a" stroke-width="1" opacity="0.35"/>
-                    <circle cx="30" cy="0"  r="5"  fill="none" stroke="#4a7a3a" stroke-width="1" opacity="0.35"/>
-                    <circle cx="0"  cy="30" r="5"  fill="none" stroke="#4a7a3a" stroke-width="1" opacity="0.35"/>
-                    <circle cx="30" cy="30" r="5"  fill="none" stroke="#4a7a3a" stroke-width="1" opacity="0.35"/>
-                  </pattern>
-                </defs>
-                <circle cx="150" cy="150" r="140" fill="url(#crochet)" stroke="#cd6184" stroke-width="2" opacity="0.7"/>
-              </svg>
-            </div>
-            <div class="sobre-badge">Feita com Amor<br/>desde 2026</div>
-          </div>
-        </div>
-        <div class="sobre-text">
-          <span class="section-tag reveal">✦ Nossa história</span>
-          <h2 class="section-title reveal">Artesanato que<br/><em>transforma</em></h2>
-          <p class="sobre-p reveal">A Macro nasceu da paixão por criar. O que começou como um hobby entre agulhas e fios tornou-se uma marca de identidade — onde cada ponto é uma escolha, cada bolsa é uma expressão.</p>
-          <p class="sobre-p reveal">Trabalhamos com fios selecionados, técnicas de crochê tradicional e um olhar moderno para criar peças que envelhecem bem, que carregam valor e que se tornam parte da sua história.</p>
-          <div class="valores reveal">
-            <div class="valor"><span class="valor-icon"></span><div><strong>Sustentável</strong><p>Fios naturais e reaproveitados</p></div></div>
-            <div class="valor"><span class="valor-icon"></span><div><strong>Artesanal</strong><p>100% feito à mão</p></div></div>
-            <div class="valor"><span class="valor-icon"></span><div><strong>Personalizado</strong><p>Peças sob encomenda</p></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- CATÁLOGO -->
   <section class="catalogo" id="catalogo">
@@ -134,7 +98,8 @@
 
         <div class="produto-card reveal" data-categoria="daisie">
           <div class="produto-img" style="--bg:#fdf5f7">
-            <img src="imgs/daise01cll.webp" alt="" style="height: 300px; width: 250px;" >
+            <img class="img-principal" src="imgs/clara01cll.JPG" alt="Daisie Amarela" style="height: 320px; width: 250px;">
+            <img class="img-hover"     src="imgs/daise01cll.webp" alt="Daisie Amarela — verso" style="height: 300px; width: 250px;">
           <div class="produto-overlay"><button onclick="abrirContato()" class="overlay-btn">Tenho interesse</button></div>
           </div>
           <div class="produto-info">
@@ -150,7 +115,8 @@
 
         <div class="produto-card reveal" data-categoria="lolita">
           <div class="produto-img" style="--bg:#edf3ea">
-            <img src="imgs/lolita01cll.webp" alt="" height="300px" width="250px">
+            <img class="img-principal" src="imgs/manu03cll.jpg" alt="Lolita" height="300px" width="250px">
+            <img class="img-hover"     src="imgs/lolita01cll.webp" alt="Lolita — verso" height="300px" width="250px">
             <div class="produto-overlay"><button onclick="abrirContato()" class="overlay-btn">Tenho interesse</button></div>
           </div>
           <div class="produto-info">
@@ -295,6 +261,35 @@
     </div>
   </section>
 
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual reveal">
+          <div class="sobre-decorativo">
+            <div class="polaroid-wrapper">
+              <div class="polaroid">
+                <img src="imgs/lolita01cll.webp" alt="Bolsa artesanal Macro">
+                <p class="polaroid-caption">feito com amor ✦</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-text">
+          <span class="section-tag reveal">✦ Nossa história</span>
+          <h2 class="section-title reveal">Artesanato que<br/><em>transforma</em></h2>
+          <p class="sobre-p reveal">A Macro nasceu da paixão por criar. O que começou como um hobby entre agulhas e fios tornou-se uma marca de identidade — onde cada ponto é uma escolha, cada bolsa é uma expressão.</p>
+          <p class="sobre-p reveal">Trabalhamos com fios selecionados, técnicas de crochê tradicional e um olhar moderno para criar peças que envelhecem bem, que carregam valor e que se tornam parte da sua história.</p>
+          <div class="valores reveal">
+            <div class="valor"><span class="valor-icon"></span><div><strong>Sustentável</strong><p>Fios naturais e reaproveitados</p></div></div>
+            <div class="valor"><span class="valor-icon"></span><div><strong>Artesanal</strong><p>100% feito à mão</p></div></div>
+            <div class="valor"><span class="valor-icon"></span><div><strong>Personalizado</strong><p>Peças sob encomenda</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- DEPOIMENTOS -->
   <section class="depoimentos">
     <div class="container">
@@ -322,13 +317,7 @@
 
   <!-- CONTATO CTA -->
   <section class="contato-cta" id="contato">
-    <div class="cta-bg">
-      <div class="blob blob-cta-1"></div>
-      <div class="blob blob-cta-2"></div>
-      <div class="grain">
-        <img src="imgs/manueclara.png" alt="" class="imgfooter">
-      </div>
-    </div>
+    <div class="cta-bg"></div>
     <div class="container">
       <div class="cta-content reveal">
         <span class="section-tag light">✦ Fale conosco</span>
