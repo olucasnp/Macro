@@ -15,26 +15,35 @@
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
-    <div class="nav-logo"><img src="imgs/logomacro.png" alt="" style="height: 50px;"></div>
+    <div class="container nav-inner">
+    <div class="nav-logo"><img src="imgs/logomacro.png" alt="Macro"></div>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#catalogo">Catálogo</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
     <button class="nav-cta" onclick="abrirContato()">Encomendar ✦</button>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
     </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-label="Menu de navegação">
+      <div class="mobile-menu-inner">
+        <span class="section-tag mobile-menu-tag">✦ Navegação</span>
+        <nav class="mobile-menu-nav">
+          <ul>
+            <li><a href="#sobre"    onclick="fecharMenu()">Sobre</a></li>
+            <li><a href="#catalogo" onclick="fecharMenu()">Catálogo</a></li>
+            <li><a href="#contato"  onclick="fecharMenu()">Contato</a></li>
+          </ul>
+        </nav>
+        <button class="btn-primary mobile-menu-cta" onclick="abrirContato();fecharMenu()">Encomendar ✦</button>
+      </div>
+    </div>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#sobre"    onclick="fecharMenu()">Sobre</a></li>
-      <li><a href="#catalogo" onclick="fecharMenu()">Catálogo</a></li>
-      <li><a href="#contato"  onclick="fecharMenu()">Contato</a></li>
-      <li><a href="#"         onclick="abrirContato();fecharMenu()">Encomendar</a></li>
-    </ul>
-  </div>
+  <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
 
   <!-- HERO -->
   <section class="hero" id="hero">
@@ -44,6 +53,7 @@
       <div class="blob blob-3"></div>
       <div class="grain"></div>
     </div>
+    <div class="container hero-inner">
     <div class="hero-content">
       <p class="hero-eyebrow reveal">✦ Feito à mão com amor</p>
       <h1 class="hero-title reveal">Bolsas que<br/><em>contam histórias</em></h1>
@@ -56,7 +66,7 @@
     <div class="hero-visual reveal">
       <div class="hero-card">
         <div class="hero-bag-illustration">
-         <img src="imgs/lolita01cll.webp" alt="" height="300px" width="250px">
+          <img src="imgs/lolita01cll.webp" alt="Bolsa Lolita — Nova Coleção">
         </div>
         <div class="hero-card-tag">Nova Coleção</div>
       </div>
@@ -68,6 +78,7 @@
         <span class="stat-num">100%</span>
         <span class="stat-label">artesanal</span>
       </div>
+    </div>
     </div>
     <div class="scroll-hint">
       <span>role para baixo</span>
@@ -98,8 +109,8 @@
 
         <div class="produto-card reveal" data-categoria="daisie">
           <div class="produto-img" style="--bg:#fdf5f7">
-            <img class="img-principal" src="imgs/clara01cll.JPG" alt="Daisie Amarela" style="height: 320px; width: 250px;">
-            <img class="img-hover"     src="imgs/daise01cll.webp" alt="Daisie Amarela — verso" style="height: 300px; width: 250px;">
+            <img class="img-principal" src="imgs/clara01cll.JPG" alt="Daisie Amarela">
+            <img class="img-hover"     src="imgs/daise01cll.webp" alt="Daisie Amarela — verso">
           <div class="produto-overlay"><button onclick="abrirContato()" class="overlay-btn">Tenho interesse</button></div>
           </div>
           <div class="produto-info">
@@ -115,8 +126,8 @@
 
         <div class="produto-card reveal" data-categoria="lolita">
           <div class="produto-img" style="--bg:#edf3ea">
-            <img class="img-principal" src="imgs/manu03cll.jpg" alt="Lolita" height="300px" width="250px">
-            <img class="img-hover"     src="imgs/lolita01cll.webp" alt="Lolita — verso" height="300px" width="250px">
+            <img class="img-principal" src="imgs/manu03cll.jpg" alt="Lolita">
+            <img class="img-hover"     src="imgs/lolita01cll.webp" alt="Lolita — verso">
             <div class="produto-overlay"><button onclick="abrirContato()" class="overlay-btn">Tenho interesse</button></div>
           </div>
           <div class="produto-info">
@@ -341,7 +352,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <div class="nav-logo"><img src="imgs/logomacro.png" alt="" style="height: 50px;"></div>
+        <div class="nav-logo"><img src="imgs/logomacro.png" alt="Macro"></div>
         <p>Bolsas de crochê artesanal<br/>feitas com amor e cuidado.</p>
       </div>
       <div class="footer-links">

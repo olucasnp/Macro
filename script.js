@@ -48,16 +48,41 @@ window.addEventListener('scroll', () => {
 /* ---- MENU MOBILE ---- */
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
- 
-menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
- 
+const menuBackdrop = document.getElementById('menuBackdrop');
+
+function abrirMenu() {
+  mobileMenu.classList.add('open');
+  menuBackdrop.classList.add('open');
+  menuToggle.classList.add('open');
+  navbar.classList.add('menu-open');
+  menuToggle.setAttribute('aria-expanded', 'true');
+  menuBackdrop.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
 function fecharMenu() {
   mobileMenu.classList.remove('open');
+  menuBackdrop.classList.remove('open');
+  menuToggle.classList.remove('open');
+  navbar.classList.remove('menu-open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuBackdrop.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
 }
- 
+
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.contains('open') ? fecharMenu() : abrirMenu();
+});
+
+menuBackdrop.addEventListener('click', fecharMenu);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') fecharMenu();
+});
+
 document.addEventListener('click', (e) => {
+  if (!mobileMenu.classList.contains('open')) return;
   if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
     fecharMenu();
   }
